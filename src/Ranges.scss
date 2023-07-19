@@ -1,0 +1,43 @@
+.ranges {
+  position: relative;
+  width: 400px;
+  background: rgba(0, 115, 255, 0.283);
+  height: 3px;
+  width: 100%;
+
+  user-select: none;
+
+  * {
+    user-select: none;
+  }
+
+  &__range {
+    background: rgb(0, 115, 255);
+    height: 3px;
+    position: absolute;
+  }
+
+  &__start, &__end {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: blue;
+
+    position: absolute;
+    top: -3px;
+
+    cursor: grab;
+  
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &__start {
+    left: -5px;
+  }
+
+  &__end {
+    right: -5px;
+  }
+}
